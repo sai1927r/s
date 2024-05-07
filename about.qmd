@@ -107,6 +107,8 @@ ggplot(data_imputed, aes(x = Stage)) +
 A chi-square test is a statistical test used to compare observed results with expected results. The purpose of these chi-square tests is to evaluate the relationship between the target variable Status and each disease-related characteristic (edema, spiders, hepatomegaly, and ascites). The distribution of the disease-related characteristic is independent of the severity of the condition represented by Status, according to the null hypothesis for each test, which states that there is no association between the disease-related feature and Status. An relationship between the two variables is the alternate hypothesis.\
 Each chi-square test's p-value expresses the likelihood of seeing the data in the event that the null hypothesis were correct. A low p-value (\< 0.05) indicates that there is enough data to rule out the null hypothesis and draw the conclusion that Status and the disease-related characteristic are significantly correlated.
 
+Although the p-value (0.0007102) is slightly larger than the typical significance level of 0.05, it is still considered statistically significant. Thus, we conclude that there is a significant association between Spiders and Status
+
 ```{r,message=FALSE,warning=FALSE}
 
 # Create contingency tables for each disease-related feature and Status
@@ -139,8 +141,6 @@ print("Chi-square test results for Edema vs. Status:")
 print(chi_sq_edema)
 
 ```
-
-Although the p-value (0.0007102) is slightly larger than the typical significance level of 0.05, it is still considered statistically significant. Thus, we conclude that there is a significant association between Spiders and Status.
 
 ### Clustering
 
